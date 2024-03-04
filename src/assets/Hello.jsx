@@ -1,9 +1,11 @@
-const Hello = ({message, name}) => {
-    console.log({message,name});
+
+const Hello = ({name,message}) => {
+    console.log({name,message});
+
     return (
       <div>
         <h1>
-            {message} {name}
+            Hello {name} {message}
         </h1> 
         </div>
     );
@@ -13,8 +15,13 @@ const Hello = ({message, name}) => {
   import PropTypes from 'prop-types';
 
   Hello.PropTypes = {
-    message: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    message: PropTypes.string
   };
+
+    Hello.defaultProps = {
+        name: "Guest",
+        message: "Good morning"
+    };
 
     export default Hello;

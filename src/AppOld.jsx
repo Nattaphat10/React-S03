@@ -1,20 +1,22 @@
 import Hello from "./assets/Hello";
+import Contact from "./assets/Contact";
+import Counter from "./assets/Counter";
+
 function App() {
-  console.log('App component');
+  console.log('App componant');
   const helloData = [
-    {name:"Nattaphat", message:"Goog morning"},
-    {name:"beam", message:"Goog afternoon"},
-    {name:"boss", message:"Goog evening"},
+    {name: "Anirach", message: "Good morning"},
+    {name: "Hulk", message: "Good afternoon"},
+    {name: "thor", message: "Good evening"}
   ]
   return (
-    <div className='App'>
-      < Counter />
-      {helloData.map((data, index) => (
-        <Hello key={indax} name={data.name} message={data.message} />
+    <div>
+      <Counter/>
+      {helloData.map((data,index)=>(
+        <Hello key ={index} name = {data.name} message={data.message}/>
       ))}
-      <Contact phont = "1234567890" email="s6506021622132@email.kmutnb.ac.th" />
+      <Contact email="Anirach@gmai.com"phone = '12345678' />
       </div>
-  )
+  );
 }
-
 export default App
